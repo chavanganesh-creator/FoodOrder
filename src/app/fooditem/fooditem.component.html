@@ -1,0 +1,99 @@
+<!-- 
+  Html code for Add Food Items
+  @author Ganesh Chavan
+ -->
+<html lang="en">
+              <head>
+                <title>Bootstrap Example</title>
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+              </head>
+              <body>
+                  <h1 class="text-center text-secondary">User Registeration</h1>
+<div class="container">
+    <div class="row">
+      <div class="offset-3"></div>
+      <div class="col-md-6">
+        <form name="form" #f="ngForm" (ngSubmit)="addFoodItem()">
+          <div class="form-group">
+            <label for="fItem_name">Food Item Name</label>
+            <input type="text"  
+                   id="fItem_name"
+                   class="form-control"
+                   name="fItem_name"
+                   placeholder="Your Food Item Name"
+                   [(ngModel)]="model.fItem_name"
+                   #name="ngModel"
+                   [ngClass]="{ 'is-invalid': f.submitted }"
+                   required/>
+           
+          </div>
+          <!-- Food Item -->
+          <div class="form-group">
+            <label for="fPrice">Food Item Price</label>
+            <input type="text"
+                   id="fPrice"
+                   class="form-control"
+                   name="fPrice"
+                   placeholder="Enter Price"
+                   [(ngModel)]="model.fPrice"
+                   #foodItemPrice="ngModel"
+                   [ngClass]="{ 'is-invalid': f.submitted }"
+                   required fPrice/>
+            <!-- input validation group -->
+            <div *ngIf="f.submitted" class="invalid-input">
+              
+            </div>
+          </div>
+  <!-- Hotel Id -->
+          <div class="form-group">
+            <label for="hid">Hotels Id</label>
+            <input type="text"
+                   id="hid"
+                   class="form-control"
+                   name="hid"
+                   placeholder="Enter Hotels Id"
+                   [(ngModel)]="model.hid"
+                   #foodItemPrice="ngModel"
+                   [ngClass]="{ 'is-invalid': f.submitted }"
+                   required hid/>
+            <!-- input validation group -->
+            <div *ngIf="f.submitted" class="invalid-input">
+              
+            </div>
+          </div>
+          <!-- Food Discription -->
+          <div class="form-group">
+            <label for="fItem_discription">Food Item Discription</label>
+            <textarea
+              id="fItem_discription"
+              class="form-control"
+              name="fItem_discription"
+              placeholder="Your Food Item Discription"
+              rows="4"
+              [(ngModel)]="model.fItem_discription"
+              #feedback="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted }"
+              required minlength="10">
+                  </textarea>
+            <!-- input validation group -->
+            <div *ngIf="f.submitted" class="invalid-input">
+              
+            </div>
+          </div>
+  
+          <button type="submit" class="btn btn-info pull-right">
+            <i class="fa fa-envelope-o"></i>
+            <span>Add Food Items</span>
+          </button>
+        </form>
+      </div>
+      <div class="offset-3"></div>
+    </div>
+  </div>
+</body>
+</html>

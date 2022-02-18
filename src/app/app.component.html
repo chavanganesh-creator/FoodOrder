@@ -1,0 +1,35 @@
+<!-- 
+  Index Html page
+  @author Ganesh Chavan
+  Date 12/11/2021
+ -->
+<html><head>
+ </head>
+  <body>
+  
+  <nav class="navbar">
+    <div class="container">
+  
+      <div class="navbar-header">
+        <button class="navbar-toggler" data-toggle="open-navbar1"></button>
+          <a href="/user" class="navbar-brand">
+              <img src="../../assets/images/hotellogo.jpg" height="90" padding="0" alt="Food Order System">
+          </a>
+      </div>
+      <h2 style="color:rgb(236, 45, 45);margin-left: 5%;">Food Ordering System</h2>
+
+  
+      <div class="navbar-menu" id="open-navbar1">
+        <ul class="navbar-nav">
+          <li><a class="nav-link" routerLink="/user" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">User</a></li> 
+         
+          <li><a class="nav-link" routerLink="/hotel" routerLinkActive="active">Hotels</a></li>
+          <li><a class="nav-link" routerLink="/order" routerLinkActive="active">Order</a></li>
+          <li><a class="nav-link" routerLink="/fooditem" routerLinkActive="active">Foods</a></li>
+          <!--<li><a class="nav-link" href="#">Signin</a></li>-->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+  </body></html>
